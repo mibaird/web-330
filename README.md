@@ -1,2 +1,5 @@
-# web-330
-BU - WEB 330 JavaScript II
+# WEB 330 Enterprise JavaScript I
+
+## Contributors
+- Instructor: Richard Krasso
+- Student: Michelle Baird
