@@ -3,9 +3,110 @@
   Chapter 2
   Programming Assignment
 
-  Author:
-  Date:
-  Filename:
+  Author: Michelle Baird
+  Date: November 17, 2025
+  Filename: styles.css
 */
 
-/* Add your CSS styles here */
+/* Michelle's Restaurant — Color Reference Chart
+  #2b1e2f — Dark Mauve (body background)
+  #3c2a42 — Mauve (form container background)
+  #d4af37 — Gold (borders, accent color, button background)
+  #f6f2e9 — Ivory (body text, input backgrounds)
+  #f6e9d0 — Warm Ivory (labels)
+  #f3d87c — Bright Gold (button hover)
+  #8be28b — Soft Green (success message)
+  #ff7b7b — Soft Red (error message)
+*/
+
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: #2b1e2f; /* dark mauve */
+  color: #f6f2e9; /* ivory */
+}
+
+/* Centered container */
+.form-container {
+  max-width: 450px;
+  margin: 80px auto;
+  background: #3c2a42; /* mauve */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 2px solid #d4af37; /* gold border */
+}
+
+/* Title styling */
+h1 {
+  font-family: "Great Vibes", "Dancing Script", "Brush Script MT", cursive;
+  font-size: 48px;
+  color: #d4af37; /* gold */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f6e9d0; /* warm ivory */
+}
+
+/* Text inputs */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  border: 1px solid #d4af37; /* gold outline */
+  background: #f6f2e9; /* ivory input */
+  color: #2b1e2f; /* dark mauve text */
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Submit button */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  background: #d4af37; /* gold */
+  color: #2b1e2f; /* dark mauve */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #f3d87c; /* brighter gold */
+}
+
+/* Success message */
+.success {
+  color: #8be28b; /* soft green */
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* Error message */
+.error {
+  color: #ff7b7b; /* soft red */
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* Center the message text */
+#message {
+  text-align: center;
+  margin-top: 20px;
+}
