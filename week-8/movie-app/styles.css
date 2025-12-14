@@ -3,9 +3,218 @@
   Chapter 4
   Programming Assignment
 
-  Author:
-  Date:
-  Filename:
+  Author: Michelle Baird
+  Date: December 12, 2025
+  Filename: styles.css
 */
 
 /* Add your styles here */
+
+/* CSS RESET */
+body, h1, h2, p, form, input, button, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+COLOR REFERENCE
+Dark Green (bg top/bottom):          #132e1d
+Medium Green (bg middle):            #225834
+Pure White (text/borders):           #ffffff
+Gold (titles):                       #ffdf80
+Red (search and image wrapper):      #c00000
+Button Green:                        #048544
+Button Hover Green:                  #00e67a
+*/
+
+/* GLOBAL STYLES */
+body {
+  font-family: 'Lora', serif;
+   background: linear-gradient(to bottom, #132e1d, #225834, #132e1d);
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* PAGE WRAPPER */
+.page-wrapper {
+  max-width: 900px;
+  margin: 2rem auto 3rem auto;
+  padding: 2rem 3rem 3rem 3rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGE BORDER */
+.candy-border {
+  width: 100%;
+  max-width: 450px;
+  border: 12px solid transparent;
+  border-radius: 12px;
+  border-image: repeating-linear-gradient( 45deg, #c00000 0 10px, #ffffff 10px 20px) 12 round;
+  padding: 4px;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* PAGE TITLE + SUBTITLE */
+#page-title {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: #ffdf80;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+#page-subtitle {
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* FORM CONTAINER */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 50px rgba(233, 6, 6, 0.4);
+}
+
+/* SEARCH FORM */
+#movie-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+}
+
+#title-input {
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  width: 70%;
+  max-width: 350px;
+  outline: none;
+}
+
+button {
+  padding: 12px 18px;
+  background-color: #048544;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #00e67a;
+  transform: translateY(-1px);
+}
+
+/* SEARCH CANDY CANE WRAPPER */
+.search-wrapper {
+  padding: 1.25rem;
+  border-radius: 18px;
+  border: 4px solid transparent;
+  background: rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.5rem;
+  background-color: #c00000;
+  border: 4px solid #ffffff;
+}
+
+/* MOVIE INFO DISPLAY */
+#movie-info {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+#movie-title {
+ font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #ffdf80;
+}
+
+#movie-director,
+#movie-year,
+#movie-synopsis {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ERROR MESSAGE */
+#error-message {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet Screens */
+@media screen and (min-width: 620px) {
+  #movie-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #title-input {
+    flex: 1;
+  }
+}
+
+/* Desktop Screens */
+@media screen and (min-width: 1000px) {
+  #page-title {
+    font-size: 2.6rem;
+  }
+
+  .form-container {
+    padding: 2rem;
+  }
+}
+
+/* Large Desktop Screens */
+@media screen and (min-width: 1600px) {
+  body {
+    padding-top: 4rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #ffffff;
+    color: #000;
+  }
+
+  #page-title, #page-subtitle {
+    color: #000;
+    text-shadow: none;
+  }
+
+  .form-container {
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  button {
+    display: none;
+  }
+}
